@@ -1,27 +1,26 @@
 import React from "react";
-import ImageSection from "@/components/products/ImageSection";
-import InsightSection from "@/components/products/InsightSection";
-import AnimateText from "@/components/products/AnimateText";
-import BenefitsSection from "@/components/products/BenefitsSection";
-import ProductSkills from "@/components/products/ProductSkills";
+import HeroSection from "@/components/product/HeroSection";
+import FeatureSection from "@/components/product/FeatureSection";
+import BenefitsSection from "@/components/product/BenefitsSection";
+import ProductSkills from "@/components/product/ProductSkills";
+import SolutionsSection from "@/components/products/SolutionSection";
+import PricingSection from "@/components/products/PricingSection";
+import { TextRevealDemo } from "@/components/TextRevealDemo";
 
-const Product: React.FC = () => {
+const Product1: React.FC = () => {
   return (
     <>
-      {/* Image Section */}
+      {/* Hero Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
-        <ImageSection />
+        <HeroSection />
       </section>
 
-      {/* Insight Section */}
+      {/* Feature Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
-        <InsightSection />
+        <FeatureSection />
       </section>
 
-      {/* Animate Text Section */}
-      <section className="flex justify-center items-center p-4 overflow-hidden">
-        <AnimateText />
-      </section>
+      <TextRevealDemo text={`Experience the Power of Continuous Learning for Business Success`}/>
 
       {/* Benefits Section */}
       <section className="overflow-hidden">
@@ -32,8 +31,18 @@ const Product: React.FC = () => {
       <section className="flex justify-center items-center p-4 overflow-hidden">
         <ProductSkills />
       </section>
+
+      {/* Skills Section */}
+      <section className="flex justify-center items-center p-4 overflow-hidden">
+        <SolutionsSection />
+      </section>
+
+      {/* Pricing Section */}
+      <section className="flex justify-center items-center p-4 overflow-hidden">
+        <PricingSection />
+      </section>
     </>
   );
 };
 
-export default Product;
+export default Product1;

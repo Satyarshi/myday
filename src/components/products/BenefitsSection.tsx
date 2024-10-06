@@ -2,33 +2,33 @@ import React from "react";
 
 const BenefitsSection = () => {
   return (
-    <section className="relative offer-section">
+    <section className="relative benefits pb-20">
       {/* Background Image */}
-      <div>
+      {/* <div>
         <img
           src="/product-rectangle.svg"
           alt="Background Pattern"
-          className="w-full object-cover client"
+          className="w-full object-cover"
         />
-      </div>
+      </div> */}
 
       {/* Content Container */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-        <h1 className="absolute top-[10rem] text-[4rem] lg:text-[8rem] font-bold opacity-10 skills-heading">
+      <div className="absolute left-0 right-0 flex flex-col items-center justify-center product-content">
+        <h1 className="absolute sm:text-[8rem] sm:top-28 font-bold opacity-10 benefits-heading">
           BENEFITS
         </h1>
-        <img src="/Active Indicator.svg" alt="line" className="pb-1" />
-        <div className="container mx-auto text-center pt-15 px-6 lg:px-0">
+        <img src="/Active Indicator.svg" alt="line" className="absolute top-48 pb-1" />
+        <div className="absolute text-center pt-15 md:mx-20 lg:px-0 top-56">
           {/* Title Section */}
-          <div className="mb-32">
+          <div className="mb-10">
             <h2 className="text-4xl lg:text-5xl font-bold text-[#111827] offer-title">
               Empower Growth Through Tailored Feedback
             </h2>
           </div>
 
           {/* Description */}
-          <div className="flex justify-center gap-8">
-            <div className="text-left max-w-2xl">
+          <div className="flex flex-col lg:flex-row justify-evenly items-start px-8 py-16 space-y-12 lg:space-y-0 lg:space-x-12">
+            <div className="text-left lg:w-1/2">
               <h2 className="text-3xl font-bold text-[#111827] mb-5">Delivering Actionable Insights to Drive Performance</h2>
               <p className="text-justify text-[#7B7E85] mb-8 text-base sm:text-lg">
                 TRU 360 helps you accelerate learning and development through
@@ -56,14 +56,14 @@ const BenefitsSection = () => {
               </ul>
               {/* CTA Button at the Start */}
               <div className="mt-10">
-                <button className="bg-[#9C27B0] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#7C1E8C] transition">
+                <button className="bg-[#7030A0] text-white font-semibold py-3 px-6 rounded-xl hover:bg-[#7C1E8C] transition">
                   Get Started
                 </button>
               </div>
             </div>
 
             {/* Data Visualization Section */}
-            <div className="flex justify-center">
+            <div className="flex justify-center lg:w-2/3">
               <img
                 src="/Group 1000002944.svg"
                 alt="graph image"

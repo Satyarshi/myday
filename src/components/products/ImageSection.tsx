@@ -5,7 +5,7 @@ const ImageSection: React.FC = () => {
   return (
     <section className="flex flex-col items-center text-center py-20">
       {/* Headline Section */}
-      <h1 className="text-4xl font-bold text-black mb-4">
+      <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
         Transform Your Talent with <span className="text-purple-600">360° Feedback</span>
       </h1>
 
@@ -15,7 +15,7 @@ const ImageSection: React.FC = () => {
       </p>
 
       {/* CTA Button */}
-      <button className="bg-[#7030A0] text-white py-3 px-8 rounded-lg mb-12 hover:bg-purple-700">
+      <button className="bg-[#7030A0] text-white py-3 px-8 rounded-xl mb-12 hover:bg-purple-700">
         Get Started
       </button>
 

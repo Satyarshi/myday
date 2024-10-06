@@ -77,7 +77,7 @@ const Header: React.FC = () => {
 
       {/* Sidebar for smaller screens */}
       {isMobile && (
-        <div className={`fixed inset-0 bg-white z-10 p-6 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
+        <div className={`fixed inset-0 bg-white z-50 p-6 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
           {/* Close Icon at the top of the sidebar */}
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-lg font-semibold">Menu</h2>

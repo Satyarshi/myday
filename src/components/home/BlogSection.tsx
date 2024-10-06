@@ -37,9 +37,9 @@ const BlogsSection: React.FC = () => {
           {blogTitles.map((title, index) => (
             <div
               key={index}
-              className="w-[300px] p-4 bg-gray-100 rounded-lg shadow-md"
+              className="w-[300px] p-4 bg-gray-100 rounded-3xl shadow-md"
             >
-              <div className="h-[180px] w-full bg-gray-300 rounded-md mb-4 flex items-center justify-center">
+              <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
                 <img
                   src="/placeholder-image.svg"
                   alt="Placeholder"

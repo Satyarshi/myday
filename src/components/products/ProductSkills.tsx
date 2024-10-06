@@ -1,5 +1,5 @@
 import React from "react";
-import { MarqueeDemo } from "./MarqueeDemo";
+import { MarqueeDemo } from "../MarqueeDemo";
 
 const ProductSkills: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const ProductSkills: React.FC = () => {
       <div className="container mx-auto text-center z-10">
         {/* Title and Description */}
         <div className="flex flex-col md:flex-row items-center justify-center mb-8 relative">
-          <h1 className="absolute left-0 bottom-[0.25px] text-[10rem] font-bold opacity-10 skills-heading skill">
+          <h1 className="absolute left-0 bottom-[0.25px] text-[10rem] font-bold opacity-10 skills-heading product-skill">
             SKILLS
           </h1>
           <div>
@@ -26,9 +26,7 @@ const ProductSkills: React.FC = () => {
         </div>
         <hr className="border border-[#DEDEDE]" />
         {/* Marquee to be added below */}
-        <div className="mt-6">
-          <MarqueeDemo />
-        </div>
+        <MarqueeDemo />
       </div>
     </section>
   );
