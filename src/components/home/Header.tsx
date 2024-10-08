@@ -4,12 +4,14 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { usePathname } from "next/navigation"; // Import usePathname
 
 const Header: React.FC = () => {
-  const [activeLink, setActiveLink] = useState<string>("home");
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+
+  const pathname = usePathname(); // Get the current pathname
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,13 +25,13 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  const handleLinkClick = (linkName: string) => {
-    setActiveLink(linkName);
+  const handleLinkClick = () => {
     setIsSidebarOpen(false);
   };
 
-  const isActive = (linkName: string): string => {
-    return activeLink === linkName ? "text-[#8f04f7]" : "text-black";
+  // Determine if a link is active based on the current route
+  const isActive = (linkPath: string): string => {
+    return pathname === linkPath ? "text-[#8f04f7]" : "text-black";
   };
 
   const toggleSidebar = () => {
@@ -65,22 +67,22 @@ const Header: React.FC = () => {
         <nav className="flex space-x-12">
           <Link
             href="/"
-            className={`${isActive("home")} hover:text-[#8f04f7]`}
-            onClick={() => handleLinkClick("home")}
+            className={`${isActive("/")} hover:text-[#8f04f7]`}
+            onClick={handleLinkClick}
           >
             Home
           </Link>
           <Link
             href="/api/about"
-            className={`${isActive("about")} hover:text-[#8f04f7]`}
-            onClick={() => handleLinkClick("about")}
+            className={`${isActive("/api/about")} hover:text-[#8f04f7]`}
+            onClick={handleLinkClick}
           >
             About
           </Link>
           <Link
             href="/api/service"
-            className={`${isActive("service")} hover:text-[#8f04f7]`}
-            onClick={() => handleLinkClick("service")}
+            className={`${isActive("/api/service")} hover:text-[#8f04f7]`}
+            onClick={handleLinkClick}
           >
             Service
           </Link>
@@ -88,25 +90,25 @@ const Header: React.FC = () => {
           {/* Products with Dropdown */}
           <div className="relative">
             <button
-              className={`${isActive("products")} hover:text-[#8f04f7]`}
+              className={`${isActive("/api/products")} hover:text-[#8f04f7]`}
               onClick={toggleDropdown}
             >
               Products
             </button>
 
             {isDropdownOpen && (
-              <div className="absolute left-0 mt-2 bg-white border rounded shadow-lg">
+              <div className="absolute left-0 mt-2 bg-white border rounded shadow-lg z-20">
                 <Link
                   href="/api/products"
                   className="block px-4 py-2 hover:bg-gray-200"
-                  onClick={() => handleLinkClick("tru360")}
+                  onClick={handleLinkClick}
                 >
                   tru360
                 </Link>
                 <Link
                   href="/api/product"
                   className="block px-4 py-2 hover:bg-gray-200"
-                  onClick={() => handleLinkClick("SPARCLE")}
+                  onClick={handleLinkClick}
                 >
                   SPARCLE
                 </Link>
@@ -116,15 +118,15 @@ const Header: React.FC = () => {
 
           <Link
             href="/api/careers-main"
-            className={`${isActive("careers")} hover:text-[#8f04f7]`}
-            onClick={() => handleLinkClick("careers")}
+            className={`${isActive("/api/careers-main")} hover:text-[#8f04f7]`}
+            onClick={handleLinkClick}
           >
             Careers
           </Link>
           <Link
             href="/api/blog"
-            className={`${isActive("blog")} hover:text-[#8f04f7]`}
-            onClick={() => handleLinkClick("blog")}
+            className={`${isActive("/api/blog")} hover:text-[#8f04f7]`}
+            onClick={handleLinkClick}
           >
             Blog
           </Link>
@@ -159,22 +161,22 @@ const Header: React.FC = () => {
           <nav className="flex flex-col space-y-4">
             <Link
               href="/"
-              className={`${isActive("home")} hover:text-[#8f04f7]`}
-              onClick={() => handleLinkClick("home")}
+              className={`${isActive("/")} hover:text-[#8f04f7]`}
+              onClick={handleLinkClick}
             >
               Home
             </Link>
             <Link
               href="/api/about"
-              className={`${isActive("about")} hover:text-[#8f04f7]`}
-              onClick={() => handleLinkClick("about")}
+              className={`${isActive("/api/about")} hover:text-[#8f04f7]`}
+              onClick={handleLinkClick}
             >
               About
             </Link>
             <Link
               href="/api/service"
-              className={`${isActive("service")} hover:text-[#8f04f7]`}
-              onClick={() => handleLinkClick("service")}
+              className={`${isActive("/api/service")} hover:text-[#8f04f7]`}
+              onClick={handleLinkClick}
             >
               Service
             </Link>
@@ -182,7 +184,7 @@ const Header: React.FC = () => {
             {/* Mobile version of the Products dropdown */}
             <div className="relative">
               <button
-                className={`${isActive("products")} hover:text-[#8f04f7]`}
+                className={`${isActive("/api/products")} hover:text-[#8f04f7]`}
                 onClick={toggleDropdown}
               >
                 Products
@@ -193,14 +195,14 @@ const Header: React.FC = () => {
                   <Link
                     href="/api/products"
                     className="block px-4 py-2 hover:bg-gray-200"
-                    onClick={() => handleLinkClick("tru360")}
+                    onClick={handleLinkClick}
                   >
                     tru360
                   </Link>
                   <Link
                     href="/api/product"
                     className="block px-4 py-2 hover:bg-gray-200"
-                    onClick={() => handleLinkClick("SPARCLE")}
+                    onClick={handleLinkClick}
                   >
                     SPARCLE
                   </Link>
@@ -210,15 +212,17 @@ const Header: React.FC = () => {
 
             <Link
               href="/api/careers-main"
-              className={`${isActive("careers")} hover:text-[#8f04f7]`}
-              onClick={() => handleLinkClick("careers")}
+              className={`${isActive(
+                "/api/careers-main"
+              )} hover:text-[#8f04f7]`}
+              onClick={handleLinkClick}
             >
               Careers
             </Link>
             <Link
               href="/api/blog"
-              className={`${isActive("blog")} hover:text-[#8f04f7]`}
-              onClick={() => handleLinkClick("blog")}
+              className={`${isActive("/api/blog")} hover:text-[#8f04f7]`}
+              onClick={handleLinkClick}
             >
               Blog
             </Link>
