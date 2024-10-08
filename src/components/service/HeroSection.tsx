@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const HeroSection: React.FC = () => {
   return (
@@ -17,9 +18,11 @@ const HeroSection: React.FC = () => {
       </p>
 
       {/* CTA Button */}
-      <button className="bg-[#7030A0] text-white py-3 px-8 rounded-xl mb-12 hover:bg-purple-700">
-        Explore Our Services
-      </button>
+      <Link href="/api/form">
+        <button className="bg-[#7030A0] text-white py-3 px-8 rounded-xl mb-12 hover:bg-purple-700">
+          Explore Our Services
+        </button>
+      </Link>
     </section>
   );
 };

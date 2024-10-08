@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection: React.FC = () => {
   return (
@@ -18,9 +19,11 @@ const HeroSection: React.FC = () => {
       </p>
 
       {/* CTA Button */}
-      <button className="bg-[#7030A0] text-white py-3 px-8 rounded-xl mb-12 hover:bg-purple-700">
-        Accelerate Skills Today
-      </button>
+      <Link href="/api/form">
+        <button className="bg-[#7030A0] text-white py-3 px-8 rounded-xl mb-12 hover:bg-purple-700">
+          Accelerate Skills Today
+        </button>
+      </Link>
 
       {/* Image Section */}
       <div className="relative w-full flex justify-center">

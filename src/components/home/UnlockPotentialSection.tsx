@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
+import Link from "next/link";
 
 const UnlockPotentialSection: React.FC = () => {
   return (
@@ -29,9 +30,12 @@ const UnlockPotentialSection: React.FC = () => {
               Tristique mauris tristique nam tincidunt vitae quis erat dictum.
               Diam diam maecenas tempor molestie risus eu.
             </p>
-            <button className="bg-purple-500 text-white font-semibold px-6 py-3 rounded-xl">
-              Join Us
-            </button>
+            <Link href="/api/form">
+              {" "}
+              <button className="bg-purple-500 text-white font-semibold px-6 py-3 rounded-xl">
+                Join Us
+              </button>
+            </Link>
           </div>
         </div>
       </section>

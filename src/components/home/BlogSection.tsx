@@ -1,10 +1,21 @@
 import React from "react";
+import Link from "next/link"; // Import Link from Next.js
 
 const BlogsSection: React.FC = () => {
-  const blogTitles: string[] = [
-    "The Future of Remote Work and Hybrid Teams",
-    "Top Leadership Strategies for Building Strong Teams",
-    "How Technology is Shaping Employee Engagement",
+  // Define blog titles along with their URLs
+  const blogs = [
+    {
+      title: "The Future of Remote Work and Hybrid Teams",
+      link: "/api/blog",
+    },
+    {
+      title: "Top Leadership Strategies for Building Strong Teams",
+      link: "/api/blog",
+    },
+    {
+      title: "How Technology is Shaping Employee Engagement",
+      link: "/api/blog",
+    },
   ];
 
   const blogTags: string[] = ["PDF", "Category", "Free"];
@@ -22,6 +33,7 @@ const BlogsSection: React.FC = () => {
           className="absolute pb-1 top-20"
         />
       </div>
+
       {/* Foreground Content */}
       <div className="text-center pt-8 pb-16">
         <h1 className="text-[#000] text-4xl md:text-5xl font-bold">
@@ -34,27 +46,28 @@ const BlogsSection: React.FC = () => {
 
         {/* Blog Cards */}
         <div className="flex justify-center gap-8 mt-10 flex-wrap text-justify">
-          {blogTitles.map((title, index) => (
-            <div
-              key={index}
-              className="w-[300px] p-4 bg-gray-100 rounded-3xl shadow-md"
-            >
-              <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
-                <img
-                  src="/placeholder-image.svg"
-                  alt="Placeholder"
-                  className="opacity-50"
-                />
+          {blogs.map((blog, index) => (
+            <Link key={index} href={blog.link}>
+              <div className="w-[300px] p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition relative z-30">
+                <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
+                  <img
+                    src="/placeholder-image.svg"
+                    alt="Placeholder"
+                    className="opacity-50"
+                  />
+                </div>
+                <h2 className="text-md font-semibold mb-2 w-[80%]">
+                  {blog.title}
+                </h2>
+                <p className="text-gray-500 text-sm flex justify-between w-[60%] font-semibold">
+                  {blogTags.map((item, i) => (
+                    <span key={i} className="hover-tag">
+                      {item}
+                    </span>
+                  ))}
+                </p>
               </div>
-              <h2 className="text-md font-semibold mb-2 w-[80%]">{title}</h2>
-              <p className="text-gray-500 text-sm flex justify-between w-[60%] font-semibold">
-                {blogTags.map((item, i) => (
-                  <span key={i} className="hover-tag">
-                    {item}
-                  </span>
-                ))}
-              </p>
-            </div>
+            </Link>
           ))}
         </div>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const BlogsSection: React.FC = () => {
   return (
@@ -33,9 +34,12 @@ const BlogsSection: React.FC = () => {
             Redefining the Way How We Make Web
           </h1>
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
-            <button className="bg-[#F4F6F6] py-3 px-8 rounded-xl hover:bg-purple-700">
-              Learn about us
-            </button>
+            <Link href="/api/form">
+              <button className="bg-[#7030a0] text-white py-3 px-8 rounded-xl hover:bg-purple-700">
+                Learn about us
+              </button>
+            </Link>
+
             <img src="/Group 1.svg" alt="" />
             <p className="text-[#6C8184]">Trusted by 1,500+ agencies</p>
           </div>

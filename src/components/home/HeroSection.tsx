@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection: React.FC = () => {
   return (
@@ -30,9 +30,11 @@ const HeroSection: React.FC = () => {
         improvement.
       </p>
 
-      <button className="bg-[#7030A0] text-white py-3 px-8 rounded-xl mt-8 hover:bg-purple-700">
-        Get Started
-      </button>
+      <Link href="/api/form">
+        <button className="bg-[#7030A0] text-white py-3 px-8 rounded-xl mt-8 hover:bg-purple-700">
+          Get Started
+        </button>
+      </Link>
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const PricingSection: React.FC = () => {
   return (
@@ -28,11 +29,13 @@ const PricingSection: React.FC = () => {
         {/* Pricing Cards */}
         <div className="flex justify-center gap-8 mt-10 flex-wrap text-justify">
           {/* Standard Plan */}
-          <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80">
+          <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20">
             <div className="text-center">
               <h2 className="md:text-xl font-bold mb-4 price-card">Standard</h2>
-              <img src="/Price.svg" alt="standard price" className="w-full"/>
-              <div className="text-gray-600 my-4 price-text">Get started with...</div>
+              <img src="/Price.svg" alt="standard price" className="w-full" />
+              <div className="text-gray-600 my-4 price-text">
+                Get started with...
+              </div>
               <hr />
               <ul className="text-left my-6 price-feature">
                 {[
@@ -62,17 +65,19 @@ const PricingSection: React.FC = () => {
                 ))}
               </ul>
 
-              <button className="bg-[#7030A0] text-white py-2 px-4 rounded-xl w-full">
-                GET STARTED
-              </button>
+              <Link href="/api/form">
+                <button className="bg-[#7030A0] text-white py-2 px-4 rounded-xl w-full mt-20">
+                  GET STARTED
+                </button>
+              </Link>
             </div>
           </div>
 
           {/* Plus Plan */}
-          <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80">
+          <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20">
             <div className="text-center">
               <h2 className="text-xl font-bold mb-4 price-card">Plus</h2>
-              <img src="/plus-price.svg" alt="plus price" className="w-full"/>
+              <img src="/plus-price.svg" alt="plus price" className="w-full" />
               <div className="text-gray-600 my-4 price-text">
                 All Standard features and...
               </div>
@@ -105,18 +110,26 @@ const PricingSection: React.FC = () => {
                 ))}
               </ul>
 
-              <button className="bg-[#7030A0] text-white py-2 px-4 rounded-xl w-full">
-                GET STARTED
-              </button>
+              <Link href="/api/form">
+                <button className="bg-[#7030A0] text-white py-2 px-4 rounded-xl w-full mt-20">
+                  GET STARTED
+                </button>
+              </Link>
             </div>
           </div>
 
           {/* Company Plan */}
-          <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80">
+          <div className="bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 w-full md:w-80 z-20">
             <div className="text-center">
               <h2 className="text-xl font-bold mb-4 price-card">Company</h2>
-              <img src="/company-price.svg" alt="company price" className="w-full"/>
-              <div className="text-gray-600 my-4 price-text">All Plus features and...</div>
+              <img
+                src="/company-price.svg"
+                alt="company price"
+                className="w-full"
+              />
+              <div className="text-gray-600 my-4 price-text">
+                All Plus features and...
+              </div>
               <hr />
               <ul className="text-left my-6 price-feature">
                 {[
@@ -148,9 +161,11 @@ const PricingSection: React.FC = () => {
                 ))}
               </ul>
 
-              <button className="bg-[#7030A0] text-white py-2 px-4 rounded-xl w-full">
-                GET STARTED
-              </button>
+              <Link href="/api/form">
+                <button className="bg-[#7030A0] text-white py-2 px-4 rounded-xl w-full">
+                  GET STARTED
+                </button>
+              </Link>
             </div>
           </div>
         </div>

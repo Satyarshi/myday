@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const BenefitsSection = () => {
   return (
@@ -46,7 +47,7 @@ const BenefitsSection = () => {
                 ].map((feature, index) => (
                   <li key={index} className="flex items-start">
                     <img
-                      src="/vector.svg"
+                      src="/Vector.svg"
                       alt="Check Icon"
                       className="mr-3 w-5 h-5"
                     />
@@ -55,11 +56,7 @@ const BenefitsSection = () => {
                 ))}
               </ul>
               {/* CTA Button at the Start */}
-              <div className="mt-10">
-                <button className="bg-[#7030A0] text-white font-semibold py-3 px-6 rounded-xl hover:bg-[#7C1E8C] transition">
-                  Get Started
-                </button>
-              </div>
+              <Link href="/api/form"><button className="bg-[#7030A0] text-white font-semibold py-3 px-6 rounded-xl hover:bg-purple-700 transition">Get Started</button></Link>
             </div>
 
             {/* Data Visualization Section */}
