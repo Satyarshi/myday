@@ -28,9 +28,9 @@ const PricingSection: React.FC = () => {
     <div className="relative py-12">
       {/* Background Text */}
       <div className="absolute left-0 right-0 flex flex-col items-center justify-center top-0">
-        <h1 className="absolute md:top-[-20px] md:text-[8rem] font-bold opacity-10 price-heading">
+        {/* <h1 className="absolute md:top-[-20px] md:text-[8rem] font-bold opacity-10 price-heading">
           PRICING
-        </h1>
+        </h1> */}
         <img
           src="/Active Indicator.svg"
           alt="line"
@@ -38,7 +38,8 @@ const PricingSection: React.FC = () => {
         />
       </div>
       {/* Foreground Content */}
-      <div className="flex flex-col items-center text-center pt-8 pb-16">
+      <div className="flex flex-col items-center text-center pt-8 pb-16 relative">
+      <img src="/Pricing.svg" alt="pricing" className="absolute left-1/2 transform -translate-x-1/2 top-[-30px] price-heading"/>
         <h2 className="text-[#000] text-4xl md:text-5xl font-bold mt-4">
           Choose Your Perfect Plan
         </h2>

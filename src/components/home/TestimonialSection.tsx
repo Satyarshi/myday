@@ -10,9 +10,10 @@ const TestimonialSection: React.FC = () => {
       <img src="/left-pattern.svg" alt="Left Icons" className="absolute top-0 left-0" />
       <div className="relative flex flex-col items-center text-center py-12">
         {/* Title */}
-        <h1 className="absolute top-[-50px] text-[8rem] font-bold opacity-10 skills-heading">
+        {/* <h1 className="absolute top-[-50px] text-[8rem] font-bold opacity-10 skills-heading">
           SAY'S
-        </h1>
+        </h1> */}
+        <img src="/say’s.svg" alt="say" className="absolute top-[-5px]"/>
         <img src="/Active Indicator.svg" alt="line" className="pb-1" />
         <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-8 relative z-10">
           People's Say About Our Support & Services

@@ -49,9 +49,10 @@ const ServicesSection: React.FC = () => {
     <div className="relative py-12">
       {/* Background Text */}
       <div className="absolute left-0 right-0 flex flex-col items-center justify-center top-0">
-        <h1 className="absolute md:top-[-20px] md:text-[8rem] font-bold opacity-10 service-heading">
+        {/* <h1 className="absolute md:top-[-20px] md:text-[8rem] font-bold opacity-10 service-heading">
           SERVICES
-        </h1>
+        </h1> */}
+        <img src="/Services.svg" alt="services" className="absolute top-5 service-heading"/>
         <img
           src="/Active Indicator.svg"
           alt="line"

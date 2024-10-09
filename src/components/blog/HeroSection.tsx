@@ -16,13 +16,19 @@ const HeroSection: React.FC = () => {
     <section className="relative flex flex-col items-center py-24 sm:py-36">
       {/* Background Heading */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <h1 className="absolute sm:top-6 md:text-[6rem] lg:text-[8rem] font-bold opacity-10 form-heading">
+        {/* <h1 className="absolute sm:top-6 md:text-[6rem] lg:text-[8rem] font-bold opacity-10 form-heading">
           BLOG
-        </h1>
+        </h1> */}
+        <img
+          src="/Blogs.svg"
+          alt="blogs"
+          className="absolute left-1/2 transform -translate-x-1/2 z-0 top-20"
+        />
+
         <img
           src="/Active Indicator.svg"
           alt="line"
-          className="pb-1 absolute top-20 md:top-28"
+          className="pb-1 absolute top-20 md:top-28 indicator"
         />
       </div>
 

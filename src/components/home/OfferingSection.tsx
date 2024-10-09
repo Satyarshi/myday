@@ -18,11 +18,12 @@ const OfferingSection: React.FC = () => {
 
       {/* Content Container */}
       <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-        <h1 className="absolute top-40 text-[8rem] font-bold opacity-10 skills-heading offering">
+        {/* <h1 className="absolute top-40 text-[8rem] font-bold opacity-10 skills-heading offering">
           OFFERING
-        </h1>
+        </h1> */}
         <img src="/Active Indicator.svg" alt="line" className="pb-1" />
-        <div className="text-center pt-15">
+        <div className="relative text-center pt-15">
+          <img src="/Offerings.svg" alt="offering" className="absolute left-1/2 transform -translate-x-1/2 z-0 top-[-40px]" />
           {/* Title Section */}
           <div className="mb-10">
             <h2 className="text-5xl font-bold text-[#111827] offer-title">

@@ -5,9 +5,10 @@ const ServiceSection: React.FC = () => {
     <section className="relative flex flex-col items-center py-36">
       {/* Background Heading */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <h1 className="absolute sm:top-6 md:text-[8rem] font-bold opacity-10 form-heading">
+        {/* <h1 className="absolute sm:top-6 md:text-[8rem] font-bold opacity-10 form-heading">
           CONNECT
-        </h1>
+        </h1> */}
+        <img src="/Connect.svg" alt="connect" className="absolute top-20"/>
         <img
           src="/Active Indicator.svg"
           alt="line"

@@ -24,9 +24,9 @@ const BlogsSection: React.FC = () => {
     <div className="relative py-12">
       {/* Background Text */}
       <div className="absolute inset-0 flex flex-col items-center justify-center top-0">
-        <h1 className="absolute top-[-20px] text-[8rem] font-bold opacity-10 skills-heading blogs">
+        {/* <h1 className="absolute top-[-20px] text-[8rem] font-bold opacity-10 skills-heading blogs">
           BLOGS
-        </h1>
+        </h1> */}
         <img
           src="/Active Indicator.svg"
           alt="line"
@@ -35,7 +35,8 @@ const BlogsSection: React.FC = () => {
       </div>
 
       {/* Foreground Content */}
-      <div className="text-center pt-8 pb-16">
+      <div className="relative text-center pt-8 pb-16">
+        <img src="/Blogs.svg" alt="blogs" className="absolute left-1/2 transform -translate-x-1/2 z-0 top-[-20px]"/>
         <h1 className="text-[#000] text-4xl md:text-5xl font-bold">
           Insights and Strategies for Your Growth
         </h1>

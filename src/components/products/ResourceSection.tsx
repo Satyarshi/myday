@@ -24,9 +24,9 @@ const ResourceSection: React.FC = () => {
     <div className="relative py-12">
       {/* Background Text */}
       <div className="absolute inset-0 flex flex-col items-center justify-center top-0">
-        <h1 className="absolute md:top-[-20px] md:text-[8rem] font-bold opacity-10 resource-heading">
+        {/* <h1 className="absolute md:top-[-20px] md:text-[8rem] font-bold opacity-10 ">
           RESOURCES
-        </h1>
+        </h1> */}
         <img
           src="/Active Indicator.svg"
           alt="line"
@@ -35,7 +35,8 @@ const ResourceSection: React.FC = () => {
       </div>
 
       {/* Foreground Content */}
-      <div className="text-center pt-8 pb-16">
+      <div className="text-center pt-8 pb-16 relative">
+        <img src="/Resources.svg" alt="resources" className="absolute left-1/2 transform -translate-x-1/2 top-[-20px] resource-heading"/>
         <h1 className="text-[#000] text-4xl md:text-5xl font-bold">
           Empower Your Team with Essential Tools
         </h1>

@@ -15,13 +15,14 @@ const BenefitsSection = () => {
 
       {/* Content Container */}
       <div className="absolute left-0 right-0 flex flex-col items-center justify-center product-content">
-        <h1 className="absolute sm:text-[8rem] sm:top-28 font-bold opacity-10 benefits-heading">
+        {/* <h1 className="absolute sm:text-[8rem] sm:top-28 font-bold opacity-10 benefits-heading">
           BENEFITS
-        </h1>
+        </h1> */}
         <img src="/Active Indicator.svg" alt="line" className="absolute top-48 pb-1" />
         <div className="absolute text-center pt-15 md:mx-20 lg:px-0 top-56">
           {/* Title Section */}
-          <div className="mb-10">
+          <div className="mb-10 relative">
+            <img src="/Benefits.svg" alt="benefits" className="absolute left-1/2 transform -translate-x-1/2 top-[-60px]"/>
             <h2 className="text-4xl lg:text-5xl font-bold text-[#111827] offer-title">
               Empower Growth Through Tailored Feedback
             </h2>

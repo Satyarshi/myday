@@ -20,9 +20,10 @@ const HeroSection: React.FC = () => {
         {/* Background heading */}
         <div className="mb-10 relative">
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <h1 className="md:text-[10rem] absolute font-bold opacity-10 md:top-[-9rem] career-heading">
+            {/* <h1 className="md:text-[10rem] absolute font-bold opacity-10 md:top-[-9rem] career-heading">
               CAREERS
-            </h1>
+            </h1> */}
+            <img src="/Careers.svg" alt="careers" className="absolute top-[-50px]" />
             <img
               src="/Active Indicator.svg"
               alt="line"

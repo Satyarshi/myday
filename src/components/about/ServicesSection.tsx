@@ -8,9 +8,10 @@ const ServiceSection: React.FC = () => {
         {/* Background overlay with large text */}
         <div className="mb-10 relative">
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <h1 className="sm:text-[8rem] sm:top-[-7rem] md:text-[10rem] absolute font-bold opacity-10 skills-heading md:top-[-8rem] product-insight">
+            {/* <h1 className="sm:text-[8rem] sm:top-[-7rem] md:text-[10rem] absolute font-bold opacity-10 skills-heading md:top-[-8rem] product-insight">
               SERVICES
-            </h1>
+            </h1> */}
+            <img src="/Services.svg" alt="services" className="absolute top-[-50px]"/>
             <img
               src="/Active Indicator.svg"
               alt="line"

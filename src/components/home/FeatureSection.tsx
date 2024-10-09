@@ -16,9 +16,7 @@ const FeatureSection: React.FC = () => {
         {/* Right Side - Features */}
         <div className="max-w-2xl text-left relative">
           {/* Heading */}
-          <h1 className="absolute bottom-[240px] right-[100px] text-[8rem] font-bold opacity-10 skills-heading feature">
-            FEATURES
-          </h1>
+          <img src="/features.svg" alt="features" className="absolute top-[-35px] left-[-10px] feature-text" />
           <img src="/Active Indicator.svg" alt="line" className="pb-1" />
           <h1 className="text-4xl md:text-5xl font-bold text-[#111827] mb-10">
             Unlock Your True Learning Potential

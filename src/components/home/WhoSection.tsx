@@ -8,9 +8,7 @@ const WhoSection: React.FC = () => {
         <div className="max-w-2xl">
           {/* Heading */}
           <div className="relative mb-6">
-            <h1 className="absolute bottom-[60px] right-[355px] text-[8rem] font-bold opacity-10 skills-heading who">
-              WHO
-            </h1>
+            <img src="/Who.svg" alt="who" className="absolute top-[-30px]"/>
             <img src="/Active Indicator.svg" alt="line" className="pb-1" />
             <h1 className="relative text-4xl md:text-5xl font-bold text-[#111827] mb-4">
               Empowering Ambitious Professionals to Achieve Their Potential
