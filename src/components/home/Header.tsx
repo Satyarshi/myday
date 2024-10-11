@@ -27,10 +27,16 @@ const Header: React.FC = () => {
 
   const handleLinkClick = () => {
     setIsSidebarOpen(false);
+    setIsDropdownOpen(false);
   };
 
   // Determine if a link is active based on the current route
   const isActive = (linkPath: string): string => {
+    if (linkPath === "/api/products") {
+      return pathname.startsWith("/api/product")
+        ? "text-[#8f04f7]"
+        : "text-black";
+    }
     return pathname === linkPath ? "text-[#8f04f7]" : "text-black";
   };
 
@@ -99,18 +105,18 @@ const Header: React.FC = () => {
             {isDropdownOpen && (
               <div className="absolute left-0 mt-2 bg-white border rounded shadow-lg z-20">
                 <Link
-                  href="/api/products"
-                  className="block px-4 py-2 hover:bg-gray-200"
-                  onClick={handleLinkClick}
-                >
-                  tru360
-                </Link>
-                <Link
                   href="/api/product"
                   className="block px-4 py-2 hover:bg-gray-200"
                   onClick={handleLinkClick}
                 >
                   SPARCLE
+                </Link>
+                <Link
+                  href="/api/products"
+                  className="block px-4 py-2 hover:bg-gray-200"
+                  onClick={handleLinkClick}
+                >
+                  tru360
                 </Link>
               </div>
             )}
@@ -193,18 +199,18 @@ const Header: React.FC = () => {
               {isDropdownOpen && (
                 <div className="mt-2 space-y-2">
                   <Link
-                    href="/api/products"
-                    className="block px-4 py-2 hover:bg-gray-200"
-                    onClick={handleLinkClick}
-                  >
-                    tru360
-                  </Link>
-                  <Link
                     href="/api/product"
                     className="block px-4 py-2 hover:bg-gray-200"
                     onClick={handleLinkClick}
                   >
                     SPARCLE
+                  </Link>
+                  <Link
+                    href="/api/products"
+                    className="block px-4 py-2 hover:bg-gray-200"
+                    onClick={handleLinkClick}
+                  >
+                    tru360
                   </Link>
                 </div>
               )}

@@ -27,12 +27,12 @@ const Home: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="flex justify-center items-center p-4 overflow-hidden">
+      <section className="flex justify-center items-center p-10 overflow-hidden">
         <StatsSection />
       </section>
 
        {/* Skills Section */}
-       <section className="flex justify-center items-center p-4 overflow-hidden">
+       <section className="flex justify-center items-center p-10 overflow-hidden">
         <SkillsSection />
       </section>
 
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Who Section */}
-      <section className="flex justify-center items-center p-4 overflow-hidden">
+      <section className="flex justify-center items-center p-10 overflow-hidden">
         <WhoSection />
       </section>
 

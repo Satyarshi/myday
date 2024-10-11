@@ -28,12 +28,12 @@ const Products: React.FC = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="flex justify-center items-center p-4 overflow-hidden">
+      <section className="flex justify-center items-center p-10 overflow-hidden">
         <ProductSkills />
       </section>
 
       {/* Skills Section */}
-      <section className="flex justify-center items-center p-4 overflow-hidden">
+      <section className="flex justify-center items-center p-10 overflow-hidden">
         <SolutionsSection />
       </section>
 

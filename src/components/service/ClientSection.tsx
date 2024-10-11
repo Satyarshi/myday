@@ -12,9 +12,11 @@ const ClientSection: React.FC = () => {
 
       {/* "Trusted by Leading Brands" Foreground Text */}
       <div className="absolute inset-0 flex flex-col items-center justify-start top-0 ">
-        <h1 className="text-[5rem] lg:text-9xl md:text-[6.4rem] font-bold opacity-10 gradient-text client-heading">
-          OUR CLIENTS
-        </h1>
+        <img
+          src="/Our clients.svg"
+          alt="clients"
+          className="absolute left-1/2 transform -translate-x-1/2 z-0 top-6"
+        />
 
         <div className="absolute top-12 text-center md:top-20 lg:top-20 sm:top-20">
           <h1 className="text-[#EBE6FA] text-4xl md:text-5xl lg:text-6xl font-bold">

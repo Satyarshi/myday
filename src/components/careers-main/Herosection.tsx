@@ -6,24 +6,48 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative py-12 w-full bg-white">
-      <img
-        src="/career-left.svg"
-        alt="Left Icons"
-        className="absolute top-0 left-0 z-0"
-      />
-      <img
-        src="/career-right.svg"
-        alt="Right Icons"
-        className="absolute top-0 right-0 z-0"
-      />
-      <div className="container mx-auto text-center z-10 my-20">
+      <div className="relative container mx-auto text-center z-10 my-20">
+        <img
+          src="/employees-placeholder.svg"
+          alt="img1"
+          className="absolute top-[-143px] left-[120px] z-0 cimg1"
+        />
+        <img
+          src="/employees-placeholder (1).svg"
+          alt="img1"
+          className="absolute top-[-105px] left-[250px] z-0 cimg2"
+        />
+        <img
+          src="/employees-placeholder (2).svg"
+          alt="img1"
+          className="absolute top-[0px] left-[120px] z-0 cimg3"
+        />
+        <img
+          src="/employees-placeholder (3).svg"
+          alt="img1"
+          className="absolute top-[-143px] right-[200px] z-0 cimg4"
+        />
+        <img
+          src="/employees-placeholder (4).svg"
+          alt="img1"
+          className="absolute top-[-50px] right-[100px] z-0 cimg5"
+        />
+        <img
+          src="/employees-placeholder (5).svg"
+          alt="img1"
+          className="absolute top-0 right-[250px] z-0 cimg6"
+        />
         {/* Background heading */}
         <div className="mb-10 relative">
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             {/* <h1 className="md:text-[10rem] absolute font-bold opacity-10 md:top-[-9rem] career-heading">
               CAREERS
             </h1> */}
-            <img src="/Careers.svg" alt="careers" className="absolute top-[-50px]" />
+            <img
+              src="/Careers.svg"
+              alt="careers"
+              className="absolute top-[-50px]"
+            />
             <img
               src="/Active Indicator.svg"
               alt="line"

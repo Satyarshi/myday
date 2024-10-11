@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link"; // Import Link from Next.js
 
 const BrowsePost: React.FC = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -10,44 +11,50 @@ const BrowsePost: React.FC = () => {
       author: "Jaroslav Dlasik",
       category: "Category",
       time: "12 min",
+      link: "/api/blog-main", // Example URL for blog post
     },
     {
       title: "Top Leadership Strategies for Building Strong Teams",
       author: "Anna Smith",
       category: "Leadership",
       time: "8 min",
+      link: "/api/blog-main", // Example URL for blog post
     },
     {
       title: "How Technology is Shaping Employee Engagement",
       author: "John Doe",
       category: "Tech",
       time: "15 min",
+      link: "/api/blog-main", // Example URL for blog post
     },
     {
-        title: "The Future of Remote Work and Hybrid Teams",
-        author: "Jaroslav Dlasik",
-        category: "Category",
-        time: "12 min",
-      },
-      {
-        title: "Top Leadership Strategies for Building Strong Teams",
-        author: "Anna Smith",
-        category: "Leadership",
-        time: "8 min",
-      },
-      {
-        title: "How Technology is Shaping Employee Engagement",
-        author: "John Doe",
-        category: "Tech",
-        time: "15 min",
-      },
+      title: "The Future of Remote Work and Hybrid Teams",
+      author: "Jaroslav Dlasik",
+      category: "Category",
+      time: "12 min",
+      link: "/api/blog-main", // Example URL for blog post
+    },
+    {
+      title: "Top Leadership Strategies for Building Strong Teams",
+      author: "Anna Smith",
+      category: "Leadership",
+      time: "8 min",
+      link: "/api/blog-main", // Example URL for blog post
+    },
+    {
+      title: "How Technology is Shaping Employee Engagement",
+      author: "John Doe",
+      category: "Tech",
+      time: "15 min",
+      link: "/api/blog-main", // Example URL for blog post
+    },
+    // Additional posts
   ];
 
   const tabs = ["All", "Design", "Development", "Business"];
 
   return (
     <section className="relative pb-12 w-full bg-white">
-
       <div className="container mx-auto text-center my-10 pt-20">
         <h1 className="text-[#000] text-4xl md:text-5xl font-bold">
           Browse Our Blog Posts
@@ -74,29 +81,27 @@ const BrowsePost: React.FC = () => {
         </div>
 
         {/* Blog post grid */}
-        <div className="flex justify-center gap-8 mt-10 flex-wrap text-justify">
+        <div className="flex justify-center gap-8 mt-10 flex-wrap text-justify relative z-30">
           {blogPosts.map((post, index) => (
-            <div
-              key={index}
-              className="w-[300px] p-4 bg-gray-100 rounded-3xl shadow-md"
-            >
-              <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
-                <img
-                  src="/placeholder-image.svg"
-                  alt="Placeholder"
-                  className="opacity-50"
-                />
+            <Link key={index} href={post.link}>
+              <div className="w-[300px] p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition">
+                <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
+                  <img
+                    src="/placeholder-image.svg"
+                    alt="Placeholder"
+                    className="opacity-50"
+                  />
+                </div>
+                <h2 className="text-md font-semibold mb-2 w-[80%]">
+                  {post.title}
+                </h2>
+                <p className="text-gray-500 text-sm flex justify-between w-[80%] font-semibold">
+                  {post.author} · {post.category} · {post.time}
+                </p>
               </div>
-              <h2 className="text-md font-semibold mb-2 w-[80%]">
-                {post.title}
-              </h2>
-              <p className="text-gray-500 text-sm flex justify-between w-[80%] font-semibold">
-                {post.author} · {post.category} · {post.time}
-              </p>
-            </div>
+            </Link>
           ))}
         </div>
-
       </div>
     </section>
   );

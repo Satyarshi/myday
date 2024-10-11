@@ -50,7 +50,7 @@ const ResourceSection: React.FC = () => {
           {resources.map((resource, index) => (
             <Link key={index} href={resource.link}>
               <div
-                className="w-[300px] p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition relative z-30" // Added "relative"
+                className="w-[300px] p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition relative z-30"
               >
                 <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
                   <img
