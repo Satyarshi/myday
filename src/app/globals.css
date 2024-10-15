@@ -159,7 +159,14 @@
   background: url(/product-rectangle.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1500px;
+  height: 1300px;
+}
+
+@media (max-width: 1024px) {
+
+  .benefits{
+    height: 1450px;
+  }
 }
 
 @media (max-width: 370px) {

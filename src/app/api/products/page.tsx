@@ -6,6 +6,7 @@ import ProductSkills from "@/components/products/ProductSkills";
 import SolutionsSection from "@/components/products/SolutionSection";
 import PricingSection from "@/components/products/PricingSection";
 import { TextRevealDemo } from "@/components/TextRevealDemo";
+import ScrollProgress from "@/components/products/ScrollProgress";
 
 const Products: React.FC = () => {
   return (
@@ -20,7 +21,9 @@ const Products: React.FC = () => {
         <InsightSection />
       </section>
 
-      <TextRevealDemo text={`Empower Your Team with Data-Driven 360-Degree Feedback`}/>
+      <TextRevealDemo
+        text={`Empower Your Team with Data-Driven 360-Degree Feedback`}
+      />
 
       {/* Benefits Section */}
       <section className="overflow-hidden">
@@ -34,7 +37,7 @@ const Products: React.FC = () => {
 
       {/* Skills Section */}
       <section className="flex justify-center items-center p-10 overflow-hidden">
-        <SolutionsSection />
+        <ScrollProgress />
       </section>
 
       {/* Pricing Section */}
