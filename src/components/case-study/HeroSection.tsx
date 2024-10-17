@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { AnimatedShinyTextDemo } from "../AnimatedShinyTextDemo";
 
 const HeroSection: React.FC = () => {
   useEffect(() => {
@@ -10,6 +11,11 @@ const HeroSection: React.FC = () => {
   return (
     <section className="flex flex-col items-center text-center py-20">
       {/* Headline Section */}
+      <div className="mt-6 bg-[#fff] px-3 py-5 rounded-lg text-xs inline-block">
+        <AnimatedShinyTextDemo
+          text={`What’s new? Instantly issue virtual card’s`}
+        />
+      </div>
       <h1 className="text-4xl font-bold text-black mb-4">
         Managing business data has never been easier
       </h1>

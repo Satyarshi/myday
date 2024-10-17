@@ -6,6 +6,7 @@ import ServicesSection from "@/components/service/ServicesSection";
 import SkillsSection from "@/components/service/SkillsSection";
 import PricingSection from "@/components/service/PricingSection";
 import { TextRevealDemo } from "@/components/TextRevealDemo";
+import SolutionsSection from "@/components/service/SolutionsSection";
 
 const Service: React.FC = () => {
   return (
@@ -34,9 +35,9 @@ const Service: React.FC = () => {
         <ServicesSection />
       </section>
 
-      {/* Skills Section */}
-      <section className="flex justify-center items-center p-10 overflow-hidden">
-        <SkillsSection />
+      {/* Services Section */}
+      <section className="flex justify-center items-center p-10 overflow-hidden mt-[-80px]">
+        <SolutionsSection />
       </section>
 
       {/* Pricing Section */}

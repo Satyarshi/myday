@@ -38,7 +38,7 @@ const BenefitsSection = () => {
                 professionals, our platform offers the tools needed to
                 streamline your 360-degree assessment process.
               </p>
-              <ul className="text-left mb-10 text-base sm:text-lg space-y-4">
+              <ul className="text-left mb-10 text-[#7B7E85] sm:text-lg space-y-4">
                 {[
                   "Fully customizable workflows tailored to roles and success profiles.",
                   "Seamless integration with your talent development initiatives.",

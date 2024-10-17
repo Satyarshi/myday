@@ -52,7 +52,11 @@ const ServicesSection: React.FC = () => {
         {/* <h1 className="absolute md:top-[-20px] md:text-[8rem] font-bold opacity-10 service-heading">
           SERVICES
         </h1> */}
-        <img src="/Services.svg" alt="services" className="absolute top-5 service-heading"/>
+        <img
+          src="/Services.svg"
+          alt="services"
+          className="absolute top-5 service-heading"
+        />
         <img
           src="/Active Indicator.svg"
           alt="line"
@@ -76,7 +80,21 @@ const ServicesSection: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`p-6 transition-all duration-300 ${service.gradient} hover:shadow-lg rounded-xl hover:cursor-pointer`}
+              className={`p-6 transition-all duration-300 rounded-xl ${
+                index === 0
+                  ? "learning-analytics"
+                  : index === 1
+                  ? "upskilling"
+                  : index === 2
+                  ? "leadership-development"
+                  : index === 3
+                  ? "onboarding"
+                  : index === 4
+                  ? "performance-management"
+                  : index === 5
+                  ? "continuous-learning"
+                  : ""
+              } hover:shadow-md hover:cursor-pointer`}
             >
               <div className="flex items-center justify-center mb-4">
                 <img

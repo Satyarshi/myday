@@ -1,9 +1,15 @@
 import React from "react";
+import { AnimatedShinyTextDemo } from "../AnimatedShinyTextDemo";
 
 const HeroSection: React.FC = () => {
   return (
     <section className="flex flex-col items-center text-center py-10 md:py-20">
       {/* Headline Section */}
+      <div className="mt-6 bg-[#fff] px-3 py-5 rounded-lg text-xs inline-block">
+        <AnimatedShinyTextDemo
+          text={`All Posts`}
+        />
+      </div>
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 px-4">
         The Future of Remote Work and Hybrid Teams
       </h1>

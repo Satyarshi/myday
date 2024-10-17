@@ -3,10 +3,10 @@ import ImageSection from "@/components/products/ImageSection";
 import InsightSection from "@/components/products/InsightSection";
 import BenefitsSection from "@/components/products/BenefitsSection";
 import ProductSkills from "@/components/products/ProductSkills";
-import SolutionsSection from "@/components/products/SolutionSection";
 import PricingSection from "@/components/products/PricingSection";
 import { TextRevealDemo } from "@/components/TextRevealDemo";
-import ScrollProgress from "@/components/products/ScrollProgress";
+import ScrollTransitionComponent from "@/components/products/ScrollTransitionComponent";
+import ServicesSection from "@/components/products/ServicesSection";
 
 const Products: React.FC = () => {
   return (
@@ -35,9 +35,14 @@ const Products: React.FC = () => {
         <ProductSkills />
       </section>
 
-      {/* Skills Section */}
+      {/* Solutions Section */}
+      <section className="flex justify-center items-center p-10 overflow-hidden mt-[-80px]">
+        <ScrollTransitionComponent />
+      </section>
+
+      {/* Services Section */}
       <section className="flex justify-center items-center p-10 overflow-hidden">
-        <ScrollProgress />
+        <ServicesSection />
       </section>
 
       {/* Pricing Section */}
@@ -49,3 +54,4 @@ const Products: React.FC = () => {
 };
 
 export default Products;
+

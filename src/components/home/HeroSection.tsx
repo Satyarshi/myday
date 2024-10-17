@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { AnimatedShinyTextDemo } from "../AnimatedShinyTextDemo";
 
 const HeroSection: React.FC = () => {
   return (
@@ -12,11 +13,8 @@ const HeroSection: React.FC = () => {
         </h1>
       </div>
 
-      <div className="mt-6 bg-[#fff] px-3 py-1 rounded-lg text-xs inline-block border-[0.7px] border-[#eee] ">
-        <span role="img" aria-label="star">
-          ✨
-        </span>{" "}
-        Introducing our new product
+      <div className="mt-6 bg-[#fff] px-3 py-1 rounded-lg text-xs inline-block">
+        <AnimatedShinyTextDemo text={`Introducing our new product`}/>
       </div>
 
       <h1 className="text-4xl font-bold text-black mt-6">

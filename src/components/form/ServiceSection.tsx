@@ -1,14 +1,25 @@
+"use client"
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ServiceSection: React.FC = () => {
+  // Function to handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent default form submission behavior
+    // Display toast notification
+    toast.success("Submitting your record...", {
+      position: "top-center", // You can change to "bottom-center" if preferred
+      autoClose: 1000, // Duration before the toast disappears
+    });
+    // Here, you can handle your form submission logic (e.g., API call)
+  };
+
   return (
     <section className="relative flex flex-col items-center py-36">
       {/* Background Heading */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        {/* <h1 className="absolute sm:top-6 md:text-[8rem] font-bold opacity-10 form-heading">
-          CONNECT
-        </h1> */}
-        <img src="/Connect.svg" alt="connect" className="absolute top-20"/>
+        <img src="/Connect.svg" alt="connect" className="absolute top-20" />
         <img
           src="/Active Indicator.svg"
           alt="line"
@@ -38,10 +49,10 @@ const ServiceSection: React.FC = () => {
       </button>
 
       <img src="/Active Indicator.svg" alt="line" className="my-8" />
-      
+
       {/* Feedback Form Section */}
       <div className="w-full max-w-3xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-2xl">
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           {/* Name Fields */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
@@ -103,24 +114,27 @@ const ServiceSection: React.FC = () => {
             </div>
             <div>
               <label className="block text-sm font-semibold mb-2 text-left">
-                Company Name
+                Company Email
               </label>
               <input
-                type="text"
+                type="email"
                 className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]"
               />
             </div>
           </div>
 
           {/* Services Dropdown */}
-          <div>
+          <div className="relative">
             <label className="block text-sm font-semibold mb-2 text-left">
               Services are you interested in
             </label>
-            <select className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]">
+            <select className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0] appearance-none pr-10">
               <option></option>
               {/* Add your options here */}
             </select>
+            <div className="absolute right-3 top-[40%] transform -translate-y-1/2 pointer-events-none text-zinc-200">
+              <span className="text-5xl">&#751;</span>
+            </div>
           </div>
 
           {/* Needs/Challenges Textarea */}
@@ -136,14 +150,17 @@ const ServiceSection: React.FC = () => {
           </div>
 
           {/* Preferred Contact Method Dropdown */}
-          <div>
+          <div className="relative">
             <label className="block text-sm font-semibold mb-2 text-left">
               Preferred contact method
             </label>
-            <select className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0]">
+            <select className="w-full p-3 rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-[#7030A0] appearance-none pr-10">
               <option></option>
               {/* Add your options here */}
             </select>
+            <div className="absolute right-3 top-[40%] transform -translate-y-1/2 pointer-events-none text-zinc-200">
+              <span className="text-5xl">&#751;</span>
+            </div>
           </div>
 
           {/* Checkbox */}
@@ -167,6 +184,7 @@ const ServiceSection: React.FC = () => {
           </button>
         </form>
       </div>
+      <ToastContainer /> {/* Toast container to show notifications */}
     </section>
   );
 };

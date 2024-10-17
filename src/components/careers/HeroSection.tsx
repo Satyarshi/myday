@@ -1,9 +1,15 @@
 import React from "react";
+import { AnimatedShinyTextDemo } from "../AnimatedShinyTextDemo";
 
 const HeroSection = () => {
   return (
     <section className="flex flex-col items-center text-center py-20">
       {/* Headline Section */}
+      <div className="mt-6 bg-[#fff] px-3 py-5 rounded-lg text-xs inline-block">
+        <AnimatedShinyTextDemo
+          text={`All Careers`}
+        />
+      </div>
       <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
         Senior UX Designer
       </h1>

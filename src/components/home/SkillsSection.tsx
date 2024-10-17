@@ -1,14 +1,27 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 
 const SkillsSection: React.FC = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Scroll handler functions for arrows
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative flex flex-col items-center text-center py-12 w-full bg-white">
       <div className="container mx-auto text-center z-10">
         {/* Title and Description */}
         <div className="flex flex-col md:flex-row items-center justify-center mb-8 relative">
-          {/* <h1 className="absolute left-0 bottom-[0.25px] text-[10rem] font-bold opacity-10 skills-heading skill">
-            SKILLS
-          </h1> */}
           <div className="relative">
             <img
               src="/Skills.svg"
@@ -28,10 +41,13 @@ const SkillsSection: React.FC = () => {
           </p>
         </div>
         <hr className="border border-[#DEDEDE]" />
-        {/* Skills Buttons with Arrows */}
-        <div className="flex items-center justify-center gap-4 mt-6">
+        {/* Skills Carousel */}
+        <div className="flex items-center justify-center gap-4 mt-6 max-w-5xl mx-auto">
           {/* Left Arrow */}
-          <button className="invisible md:visible text-[#9C27B0] bg-transparent border-2 border-[#9C27B0] rounded-full p-2 hover:bg-[#9C27B0] hover:text-white">
+          <button
+            onClick={scrollLeft}
+            className="text-[#9C27B0] bg-transparent border-2 border-[#9C27B0] rounded-full p-2 hover:bg-[#9C27B0] hover:text-white"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -48,24 +64,30 @@ const SkillsSection: React.FC = () => {
             </svg>
           </button>
 
-          {/* Skill Buttons */}
-          <div className="flex flex-wrap justify-center items-center gap-4">
-            <button className="px-4 py-2 text-white rounded-lg skills font-semibold">
-              Time Management
+          {/* Skill Buttons Carousel */}
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-scroll scrollbar-hide no-scrollbar gap-4 snap-x snap-mandatory items-center justify-start scroll-smooth"
+          >
+            <button className="px-4 py-2 bg-white border border-[#9C27B0] text-[#111827] rounded-lg font-semibold snap-start shrink-0 skills">
+              Time Managements
             </button>
-            <button className="px-4 py-2 bg-white border border-[#9C27B0] text-[#111827] rounded-lg font-semibold">
+            <button className="px-4 py-2 bg-white border border-[#9C27B0] text-[#111827] rounded-lg font-semibold snap-start shrink-0 skills">
               Problem Solving
             </button>
-            <button className="px-4 py-2 bg-white border border-[#9C27B0] text-[#111827] rounded-lg font-semibold">
+            <button className="px-4 py-2 bg-white border border-[#9C27B0] text-[#111827] rounded-lg font-semibold snap-start shrink-0 skills">
               Communication
             </button>
-            <button className="px-4 py-2 bg-white border border-[#9C27B0] text-[#111827] rounded-lg font-semibold">
-              Team Management
+            <button className="px-4 py-2 border border-[#9C27B0] text-[#111827] rounded-lg font-semibold snap-start shrink-0 skills">
+              Team Managements
             </button>
           </div>
 
           {/* Right Arrow */}
-          <button className="invisible md:visible text-[#9C27B0] bg-transparent border-2 border-[#9C27B0] rounded-full p-2 hover:bg-[#9C27B0] hover:text-white">
+          <button
+            onClick={scrollRight}
+            className="text-[#9C27B0] bg-transparent border-2 border-[#9C27B0] rounded-full p-2 hover:bg-[#9C27B0] hover:text-white"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

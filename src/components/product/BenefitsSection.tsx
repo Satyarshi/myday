@@ -44,7 +44,7 @@ const BenefitsSection = () => {
                 retention. Unlock continuous growth and improvement with a focus
                 on real-world application.
               </p>
-              <ul className="text-left mb-10 text-base sm:text-lg space-y-4">
+              <ul className="text-left mb-10 text-[#7B7E85] sm:text-lg space-y-4">
                 {[
                   "Customized Learning Paths: Tailored to individual needs for optimal skill development.",
                   "Real-Time Feedback: Helps learners immediately improve their performance.",

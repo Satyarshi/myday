@@ -3,7 +3,7 @@ import React from "react";
 const WhoSection: React.FC = () => {
   return (
     <section className="flex flex-col md:flex-row items-center text-center md:text-left py-12 w-full bg-white relative">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10 px-4">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-around relative z-10 px-4">
         {/* Left Side - Text Content */}
         <div className="max-w-2xl">
           {/* Heading */}

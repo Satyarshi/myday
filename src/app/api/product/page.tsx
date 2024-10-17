@@ -6,6 +6,8 @@ import ProductSkills from "@/components/product/ProductSkills";
 import SolutionsSection from "@/components/products/SolutionSection";
 import PricingSection from "@/components/products/PricingSection";
 import { TextRevealDemo } from "@/components/TextRevealDemo";
+import ServicesSection from "@/components/product/ServicesSection";
+import SolutionSection from "@/components/product/SolutionSection";
 
 const Product1: React.FC = () => {
   return (
@@ -32,9 +34,14 @@ const Product1: React.FC = () => {
         <ProductSkills />
       </section>
 
-      {/* Skills Section */}
+      {/* Solution Section */}
+      <section className="flex justify-center items-center p-10 overflow-hidden mt-[-80px]">
+       <SolutionSection />
+      </section>
+
+      {/* Services Section */}
       <section className="flex justify-center items-center p-10 overflow-hidden">
-        <SolutionsSection />
+        <ServicesSection />
       </section>
 
       {/* Pricing Section */}

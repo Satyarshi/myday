@@ -9,7 +9,7 @@ const BlogsSection: React.FC = () => {
         {/* <h1 className="absolute sm:top-6 md:text-[8rem] font-bold opacity-10 form-heading">
           BLOGS
         </h1> */}
-        <img src="/Blogs.svg" alt="blogs" className="absolute left-1/2 transform -translate-x-1/2 z-0 top-10 blog-img"/>
+        <img src="/About.svg" alt="about" className="absolute left-1/2 transform -translate-x-1/2 z-0 top-20"/>
         <img
           src="/Active Indicator.svg"
           alt="line"

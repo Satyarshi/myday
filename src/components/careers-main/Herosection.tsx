@@ -1,8 +1,68 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link"; // Import Link from Next.js
 
 const HeroSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState("All");
+
+  // Define job listings with their URLs
+  const jobListings = [
+    {
+      title: "UI/UX Designer",
+      salary: "₹50,000 - ₹80,000",
+      location: "Remote | Department",
+      link: "/api/careers", // Add a link for this job
+    },
+    {
+      title: "Sales Executive",
+      salary: "₹45,000 - ₹75,000",
+      location: "Remote | Department",
+      link: "/api/careers", // Add a link for this job
+    },
+    {
+      title: "Operations Manager",
+      salary: "₹60,000 - ₹90,000",
+      location: "Location | Department",
+      link: "/api/careers", // Add a link for this job
+    },
+    // Duplicate job listings, ensure to update links accordingly
+    {
+      title: "UI/UX Designer",
+      salary: "₹50,000 - ₹80,000",
+      location: "Remote | Department",
+      link: "/api/careers", // Add a link for this job
+    },
+    {
+      title: "Sales Executive",
+      salary: "₹45,000 - ₹75,000",
+      location: "Remote | Department",
+      link: "/api/careers", // Add a link for this job
+    },
+    {
+      title: "Operations Manager",
+      salary: "₹60,000 - ₹90,000",
+      location: "Location | Department",
+      link: "/api/careers", // Add a link for this job
+    },
+    {
+      title: "UI/UX Designer",
+      salary: "₹50,000 - ₹80,000",
+      location: "Remote | Department",
+      link: "/api/careers", // Add a link for this job
+    },
+    {
+      title: "Sales Executive",
+      salary: "₹45,000 - ₹75,000",
+      location: "Remote | Department",
+      link: "/api/careers", // Add a link for this job
+    },
+    {
+      title: "Operations Manager",
+      salary: "₹60,000 - ₹90,000",
+      location: "Location | Department",
+      link: "/api/careers", // Add a link for this job
+    },
+  ];
 
   return (
     <section className="relative py-12 w-full bg-white">
@@ -15,7 +75,7 @@ const HeroSection: React.FC = () => {
         <img
           src="/employees-placeholder (1).svg"
           alt="img1"
-          className="absolute top-[-105px] left-[250px] z-0 cimg2"
+          className="absolute top-[-110px] left-[250px] z-0 cimg2"
         />
         <img
           src="/employees-placeholder (2).svg"
@@ -109,68 +169,19 @@ const HeroSection: React.FC = () => {
 
         {/* Grid of career cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-          {/* Job 1 */}
-          <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left">
-            <h3 className="text-xl font-bold mb-2">UI/UX Designer</h3>
-            <p className="text-gray-700">₹50,000 - ₹80,000</p>
-            <p className="text-gray-500">Remote | Department</p>
-          </div>
-
-          {/* Job 2 */}
-          <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left">
-            <h3 className="text-xl font-bold mb-2">Sales Executive</h3>
-            <p className="text-gray-700">₹45,000 - ₹75,000</p>
-            <p className="text-gray-500">Remote | Department</p>
-          </div>
-
-          {/* Job 3 */}
-          <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left">
-            <h3 className="text-xl font-bold mb-2">Operations Manager</h3>
-            <p className="text-gray-700">₹60,000 - ₹90,000</p>
-            <p className="text-gray-500">Location | Department</p>
-          </div>
-
-          {/* Job 4 - Repeated UI/UX Designer */}
-          <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left">
-            <h3 className="text-xl font-bold mb-2">UI/UX Designer</h3>
-            <p className="text-gray-700">₹50,000 - ₹80,000</p>
-            <p className="text-gray-500">Remote | Department</p>
-          </div>
-
-          {/* Job 5 - Repeated Sales Executive */}
-          <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left">
-            <h3 className="text-xl font-bold mb-2">Sales Executive</h3>
-            <p className="text-gray-700">₹45,000 - ₹75,000</p>
-            <p className="text-gray-500">Remote | Department</p>
-          </div>
-
-          {/* Job 6 - Repeated Operations Manager */}
-          <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left">
-            <h3 className="text-xl font-bold mb-2">Operations Manager</h3>
-            <p className="text-gray-700">₹60,000 - ₹90,000</p>
-            <p className="text-gray-500">Location | Department</p>
-          </div>
-
-          {/* Job 7 - Repeated UI/UX Designer */}
-          <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left">
-            <h3 className="text-xl font-bold mb-2">UI/UX Designer</h3>
-            <p className="text-gray-700">₹50,000 - ₹80,000</p>
-            <p className="text-gray-500">Remote | Department</p>
-          </div>
-
-          {/* Job 8 - Repeated Sales Executive */}
-          <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left">
-            <h3 className="text-xl font-bold mb-2">Sales Executive</h3>
-            <p className="text-gray-700">₹45,000 - ₹75,000</p>
-            <p className="text-gray-500">Remote | Department</p>
-          </div>
-
-          {/* Job 9 - Repeated Operations Manager */}
-          <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left">
-            <h3 className="text-xl font-bold mb-2">Operations Manager</h3>
-            <p className="text-gray-700">₹60,000 - ₹90,000</p>
-            <p className="text-gray-500">Location | Department</p>
-          </div>
+          {jobListings.map((job, index) => (
+            <Link key={index} href={job.link}>
+              <div
+                className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-6 rounded-3xl text-left cursor-pointer" // Added cursor-pointer for better UX
+              >
+                <h3 className="text-xl font-bold mb-2">
+                  {job.title}
+                </h3>
+                <p className="text-gray-700">{job.salary}</p>
+                <p className="text-gray-500">{job.location}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
