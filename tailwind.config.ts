@@ -86,7 +86,10 @@ const config: Config = {
   			marquee: 'marquee var(--duration) infinite linear',
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
   			'shiny-text': 'shiny-text 8s infinite'
-  		}
+  		},
+		transitionProperty:{
+			width:"width",
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

@@ -36,7 +36,7 @@ const Products: React.FC = () => {
       </section>
 
       {/* Solutions Section */}
-      <section className="flex justify-center items-center p-10 overflow-hidden mt-[-80px]">
+      <section className="flex justify-center items-center p-10 overflow-hidden">
         <ScrollTransitionComponent />
       </section>
 

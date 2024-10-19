@@ -49,7 +49,7 @@ const BlogsSection: React.FC = () => {
         <div className="flex justify-center gap-8 mt-10 flex-wrap text-justify">
           {blogs.map((blog, index) => (
             <Link key={index} href={blog.link}>
-              <div className="w-[300px] p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition relative z-30">
+              <div className="w-[300px] h-[320px] p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition relative z-30">
                 <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
                   <img
                     src="/placeholder-image.svg"

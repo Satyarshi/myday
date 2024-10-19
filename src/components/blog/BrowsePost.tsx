@@ -81,10 +81,10 @@ const BrowsePost: React.FC = () => {
         </div>
 
         {/* Blog post grid */}
-        <div className="flex justify-center gap-8 mt-10 flex-wrap text-justify relative z-30">
+        <div className="flex justify-center gap-8 mt-10 flex-wrap text-justify relative z-30 ">
           {blogPosts.map((post, index) => (
             <Link key={index} href={post.link}>
-              <div className="w-[300px] p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition">
+              <div className="w-[300px] h-[350px] p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition">
                 <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
                   <img
                     src="/placeholder-image.svg"
