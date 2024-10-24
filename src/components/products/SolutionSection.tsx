@@ -1,73 +1,138 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-const SolutionsSection: React.FC = () => {
-  return (
-    <section className="relative flex flex-col items-center text-center py-12 w-full bg-white">
-      <div className="container mx-auto text-left z-10">
-        {/* Title and Description */}
-        <div className="flex flex-col md:flex-row items-start justify-between mb-8 relative">
-          <h1
-            className="absolute text-[7rem] font-bold opacity-10 skills-heading"
-            style={{ top: "-90px" }}
+const pages = [
+  {
+    id: 1,
+    heading: "Tailored Products for Every Stage of Development",
+    title: "Classic 360 Degrees",
+    description:
+      "Enhanced integration to streamline your feedback processes and align business outcomes with talent development.",
+    stats: [
+      { label: "95%", text: "faster implementation of feedback processes." },
+      {
+        label: "80%",
+        text: "of users report better alignment with talent management goals.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    heading: "Tailored Products for Every Stage of Development",
+    title: "Next Stage Development",
+    description:
+      "Enhanced integration to streamline your feedback processes and align business outcomes with talent development.",
+    stats: [
+      {
+        label: "90%",
+        text: "improved team collaboration through the feedback loop.",
+      },
+      {
+        label: "85%",
+        text: "of users achieve faster upskilling with tailored plans.",
+      },
+    ],
+  },
+  {
+    id: 3,
+    heading: "Tailored Products for Every Stage of Development",
+    title: "Future-Ready Platform",
+    description:
+      "Prepare for future growth with seamless integration of automated solutions for competency development.",
+    stats: [
+      {
+        label: "92%",
+        text: "of organizations report faster employee development.",
+      },
+      {
+        label: "88%",
+        text: "increased satisfaction with performance assessments.",
+      },
+    ],
+  },
+];
+
+const ProgressBars = ({ activePage }: { activePage: number }) => (
+  <div className="flex flex-col items-center justify-center space-y-2 md:space-y-4">
+    {pages.map((page, index) => (
+      <div
+        key={page.id}
+        className={`w-1 h-8 md:w-2 md:h-10 rounded-full transition-colors duration-300 ${
+          activePage === index + 1 ? "bg-purple-600" : "bg-purple-300"
+        }`}
+      />
+    ))}
+  </div>
+);
+
+const SectionPage = ({ page, isActive }: { page: any; isActive: boolean }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+    transition={{ duration: 0.5 }}
+    className="section-page flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8"
+  >
+    <div className=" relative px-4">
+      <img src="/Solutions.svg" alt="skills" className="relative top-4 mt-4 lg:absolute lg:top-[-50px] left-0" />
+      <img src="/Active Indicator.svg" alt="line" className="pb-1" />
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+        {page.heading}
+      </h1>
+      <h2 className="text-xl md:text-2xl font-semibold pt-5 text-[#4A4A4A]">
+        {page.title}
+      </h2>
+      <p className="mt-4 text-gray-500">{page.description}</p>
+      <div className="mt-4 flex flex-row space-y-0 space-x-4">
+        {page.stats.map((stat: any, idx: number) => (
+          <div
+            key={idx}
+            className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] p-4 rounded-3xl text-left cursor-pointer w-full md:w-80"
           >
-            SOLUTIONS
-          </h1>
-          <div className="flex items-start w-full md:w-1/2">
-            {/* Vertical Colored Bars */}
-            <div className="flex flex-col items-center justify-center space-y-2 mr-6 h-[400px]">
-              <div className="w-1 h-16 bg-[#9030A069]"></div>
-              <div className="w-1 h-16 bg-[#9030A069]"></div>
-              <div className="w-1 h-16 bg-[#9030A069]"></div>
-            </div>
-
-            {/* Text Content */}
-            <div className="flex flex-col space-y-6">
-              {/* Section Title */}
-              <h1 className="text-4xl md:text-5xl font-bold text-[#111827] mb-4">
-                Tailored Products for Every Stage of Development
-              </h1>
-
-              {/* Product Title */}
-              <h2 className="text-lg lg:text-xl font-bold text-[#111827]">
-                Classic 360 Degrees
-              </h2>
-
-              {/* Product Description */}
-              <p className="text-[#7B7E85] text-lg max-w-xl">
-                A fully digitalized platform offering customizable workflows,
-                automatic notifications, and easy integration. Perfect for
-                companies seeking to optimize 360-degree assessments for skill
-                and competency development.
-              </p>
-
-              {/* Statistics Section */}
-              <div className="flex flex-col md:flex-row items-center gap-4 mt-6">
-                {/* Stat Box 1 */}
-                <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] rounded-xl p-6 w-52">
-                  <p className="text-3xl font-bold text-black">95%</p>
-                  <p className="text-[#7B7E85]">
-                    faster implementation of feedback processes.
-                  </p>
-                </div>
-
-                {/* Stat Box 2 */}
-                <div className="bg-white shadow-[0_4px_12px_rgba(0,0,0,0.2)] rounded-xl p-6 w-72">
-                  <p className="text-3xl font-bold text-black">80%</p>
-                  <p className="text-[#7B7E85]">
-                    of users report better alignment with talent management
-                    goals.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p className="text-2xl font-bold">{stat.label}</p>
+            <p className="text-gray-600">{stat.text}</p>
           </div>
-
-          {/* Image Placeholder */}
-          <img src="/Group 1000002944.svg" alt="img" className="w-1/2"/>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
+    <div className="w-full lg:w-1/2 bg-gray-300 rounded-lg flex items-center justify-center h-48 lg:h-auto">
+      {/* Placeholder for image */}
+      <p className="text-gray-400">Image Placeholder</p>
+    </div>
+  </motion.div>
+);
+
+const SolutionSection = () => {
+  const [activePage, setActivePage] = useState(1);
+
+  const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
+    const { scrollTop, clientHeight } = event.currentTarget;
+    const pageHeight = clientHeight;
+    const newPage = Math.ceil((scrollTop + 1) / pageHeight); // Update page based on scroll position
+    setActivePage(newPage);
+  };
+
+  return (
+    <div className="flex space-x-4 md:space-x-8 px-2 md:px-0">
+      {/* Progress Bars */}
+      <ProgressBars activePage={activePage} />
+
+      {/* Content Section */}
+      <div
+        className="overflow-y-scroll h-screen scroll-container w-full"
+        onScroll={handleScroll}
+      >
+        {pages.map((page, index) => (
+          <div
+            key={page.id}
+            className="h-screen flex items-center justify-center"
+          >
+            <SectionPage page={page} isActive={activePage === index + 1} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default SolutionsSection;
+export default SolutionSection;

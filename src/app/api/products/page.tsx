@@ -1,43 +1,56 @@
 import React from "react";
-import ImageSection from "@/components/products/ImageSection";
-import InsightSection from "@/components/products/InsightSection";
 import BenefitsSection from "@/components/products/BenefitsSection";
 import ProductSkills from "@/components/products/ProductSkills";
 import PricingSection from "@/components/products/PricingSection";
 import { TextRevealDemo } from "@/components/TextRevealDemo";
-import ScrollTransitionComponent from "@/components/products/ScrollTransitionComponent";
 import ServicesSection from "@/components/products/ServicesSection";
-
-const Products: React.FC = () => {
+import SolutionSection from "@/components/products/SolutionSection";
+import ImageSection from "@/components/products/ImageSection";
+import InsightSection from "@/components/products/InsightSection";
+import { productData } from "@/components/products/productData";
+const Product1: React.FC = () => {
   return (
     <>
-      {/* Image Section */}
+      {/* Hero Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
-        <ImageSection />
+        <ImageSection
+          shinyText={productData.heroSection.shinyText}
+          heading={productData.heroSection.heading}
+          subheading={productData.heroSection.subheading}
+          buttonText={productData.heroSection.buttonText}
+        />
       </section>
 
-      {/* Insight Section */}
+      {/* Feature Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
         <InsightSection />
       </section>
 
       <TextRevealDemo
-        text={`Empower Your Team with Data-Driven 360-Degree Feedback`}
+        text={`Experience the Power of Continuous Learning for Business Success`}
       />
 
       {/* Benefits Section */}
       <section className="overflow-hidden">
-        <BenefitsSection />
+        <BenefitsSection
+          title={productData.benefitsSection.title}
+          descriptionTitle={productData.benefitsSection.descriptionTitle}
+          descriptionText={productData.benefitsSection.descriptionText}
+          listItems={productData.benefitsSection.listItems}
+        />
       </section>
 
       {/* Skills Section */}
       <section className="flex justify-center items-center p-10 overflow-hidden">
-        <ProductSkills />
+        <ProductSkills
+          title={productData.skillsSection.title}
+          description={productData.skillsSection.description}
+        />
       </section>
 
-      {/* Solutions Section */}
-      <section className="flex justify-center items-center p-10 overflow-hidden">
-        <ScrollTransitionComponent />
+      {/* Solution Section */}
+      <section className="flex justify-center items-center p-10 overflow-hidden mt-[-80px]">
+        <SolutionSection />
       </section>
 
       {/* Services Section */}
@@ -53,5 +66,4 @@ const Products: React.FC = () => {
   );
 };
 
-export default Products;
-
+export default Product1;

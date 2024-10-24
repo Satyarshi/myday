@@ -36,7 +36,7 @@ const BlogsSection: React.FC = () => {
           </h1>
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
             <Link href="/api/form">
-              <button className="bg-[#7030a0] text-white py-3 px-8 rounded-xl hover:bg-purple-700">
+              <button className="bg-[#7030a0] text-white py-3 px-3 rounded-xl hover:bg-purple-700">
                 Learn about us
               </button>
             </Link>

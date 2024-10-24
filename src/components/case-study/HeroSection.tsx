@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
           className="p-6 rounded-xl flex"
           data-aos="zoom-in-left"
           data-aos-duration="1500"
-          data-aos-delay="500"
+          data-aos-delay="50"
         >
           <div className="bg-purple-600 text-white p-6 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)] flex flex-col justify-center">
             <div className="text-5xl font-bold">95%</div>
@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
           className="p-6 rounded-xl flex flex-col justify-center"
           data-aos="zoom-in-left"
           data-aos-duration="2000"
-          data-aos-delay="1000"
+          data-aos-delay="50"
         >
           <div
             className="grid grid-rows-[1fr_2fr] gap-4 h-full"
@@ -85,7 +85,7 @@ const HeroSection: React.FC = () => {
           className="p-6 rounded-xl flex flex-col justify-center"
           data-aos="zoom-in-left"
           data-aos-duration="2000"
-          data-aos-delay="1300"
+          data-aos-delay="50"
         >
           <div className="grid grid-rows-[1fr_1fr] gap-4 h-full">
             {/* Purple card - 95% */}

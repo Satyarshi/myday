@@ -2,8 +2,7 @@ import React from "react";
 import BlogsSection from "@/components/about/BlogsSection";
 import ClientSection from "@/components/home/ClientSection";
 import ServiceSection from "@/components/about/ServicesSection";
-import SkillsSection from "@/components/about/SkillsSection";
-import SolutionsSection from "@/components/about/SolutionsSection";
+import SolutionSection from "@/components/products/SolutionSection";
 
 const About: React.FC = () => {
   return (
@@ -25,7 +24,7 @@ const About: React.FC = () => {
 
       {/* Services Section */}
       <section className="flex justify-center items-center p-10 overflow-hidden mt-[-80px]">
-        <SolutionsSection />
+        <SolutionSection />
       </section>
     </>
   );

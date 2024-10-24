@@ -26,39 +26,45 @@ const TestimonialSection: React.FC = () => {
         <div className="relative flex items-center justify-center z-10 space-x-4">
           {/* Testimonial Text */}
           <div className="relative flex flex-col items-center justify-center text-center max-w-3xl space-x-4 z-10">
-            <div className="flex justify-center items-center gap-x-2">
-              <div className="text-3xl text-gray-800 font-semibold testimonial">
+            <div>
+              <div className="text-3xl text-gray-800 font-semibold testimonial relative">
                 We Empower Organizations
-              </div>
-              <div className="overflow-hidden w-20 hover:w-40 transition-width">
-                <img src="/man.svg" alt="Person 1" className={`w-full h-10 object-cover rounded-3xl transition-width`} />
-              </div>
-              <div className="text-3xl text-gray-800 font-semibold testimonial">
-                And Their
-              </div>
-            </div>
-            <div className="flex justify-center items-center gap-x-2">
-              <div className="text-3xl text-gray-800 font-semibold testimonial">
-                Teams
-              </div>
-              <div className="overflow-hidden w-20 hover:w-40 transition-width">
-                <img src="/woman.svg" alt="Person 1" className={`w-full h-10 object-cover rounded-3xl transition-width`} />
-              </div>
-              <div className="text-3xl text-gray-800 font-semibold testimonial">
-              to seamlessly implement and manage
-              </div>
-            </div>
-            <div className="text-3xl text-gray-800 font-semibold testimonial hidden">
-              We Empower Organizations
-              {/* Image 1 with tooltip */}
-              <span
-                className="relative inline-block"
-                onMouseEnter={() => setHovered(1)}
-                onMouseLeave={() => setHovered(null)}
-              >
-                <img src="/man.svg" alt="Person 1" className={`w-20 inline`} />
-                {hovered === 1 && (
-                  <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-64 bg-zinc-600 text-white text-sm p-4 rounded-lg shadow-lg z-20 man-hover">
+                <span
+                  className="w-20 hover:w-40 transition-width inline-block relative"
+                  onMouseEnter={() => setHovered(1)}
+                  onMouseLeave={() => setHovered(null)}
+                >
+                  <img
+                    src="/man.svg"
+                    alt="Person 1"
+                    className={`w-full h-8 object-cover rounded-3xl transition-width`}
+                  />
+                  {hovered === 1 && (
+                    <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-64 bg-zinc-600 text-white text-sm p-4 rounded-lg shadow-lg z-20 man-hover">
+                      {/* Tooltip Arrow */}
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-zinc-600"></div>
+                      <p>
+                        "It's great to have a good sense of where my money is
+                        going and be able to adjust as necessary."
+                      </p>
+                      <p className="mt-2 font-bold">John Doe</p>
+                      <p className="text-xs">Employee at Leva</p>
+                    </div>
+                  )}
+                </span>
+                And Their teams{" "}
+                <span
+                  className="relative w-20 hover:w-40 transition-width inline-block"
+                  onMouseEnter={() => setHovered(2)}
+                  onMouseLeave={() => setHovered(null)}
+                >
+                  <img
+                    src="/woman.svg"
+                    alt="Person 2"
+                    className={`w-full h-8 object-cover rounded-3xl transition-width`}
+                  />
+                  {hovered === 2 && (
+                    <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 w-64 bg-zinc-600 text-white text-sm p-4 rounded-lg shadow-lg z-20 woman-hover">
                     {/* Tooltip Arrow */}
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-zinc-600"></div>
                     <p>
@@ -68,35 +74,11 @@ const TestimonialSection: React.FC = () => {
                     <p className="mt-2 font-bold">John Doe</p>
                     <p className="text-xs">Employee at Leva</p>
                   </div>
-                )}
-              </span>
-              And Their Teams
-              {/* Image 2 with tooltip */}
-              <span
-                className="relative inline-block"
-                onMouseEnter={() => setHovered(2)}
-                onMouseLeave={() => setHovered(null)}
-              >
-                <img
-                  src="/woman.svg"
-                  alt="Person 2"
-                  className={`w-20 inline`}
-                />
-                {hovered === 2 && (
-                  <div className="absolute top-full mt-2 lg:left-1/2 transform -translate-x-1/2 w-64 bg-zinc-600 text-white text-sm p-4 rounded-lg shadow-lg z-20 woman-hover">
-                    {/* Tooltip Arrow */}
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-zinc-600"></div>
-                    <p>
-                      "Our team has never been more productive with the support
-                      provided by the platform."
-                    </p>
-                    <p className="mt-2 font-bold">Jane Doe</p>
-                    <p className="text-xs">Manager at XYZ</p>
-                  </div>
-                )}
-              </span>
-              To Seamlessly Implement And Manage Dynamic Learning Solutions With
-              Ease.
+                  )}
+                </span>{" "}
+                to seamlessly implement and manage dynamic learning solutions
+                with ease.
+              </div>
             </div>
           </div>
         </div>

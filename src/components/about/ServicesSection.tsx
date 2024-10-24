@@ -9,7 +9,7 @@ const ServiceSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-12 w-full bg-white">
+    <section className="relative py-12 w-full bg-white mt-10">
       <div className="container mx-auto text-center z-10 px-4 sm:px-6 lg:px-8">
         {/* Background overlay with large text */}
         <div className="mb-10 relative">
@@ -103,7 +103,7 @@ const ServiceSection: React.FC = () => {
             className="p-6 rounded-xl flex flex-col justify-center row-span-3"
             data-aos="zoom-in-left"
             data-aos-duration="1500"
-            data-aos-delay="500"
+            data-aos-delay="50"
           >
             <div className="grid grid-rows-[2fr_1fr] gap-4 h-full">
               {/* Purple card - 95% */}
@@ -138,14 +138,14 @@ const ServiceSection: React.FC = () => {
             className="p-6 rounded-xl flex flex-col justify-center row-span-3"
             data-aos="zoom-in-left"
             data-aos-duration="1000"
-            data-aos-delay="1000"
+            data-aos-delay="50"
           >
             <div className="grid gap-6 h-full">
               <div
                 className="w-full p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition relative z-30"
                 data-aos="zoom-in-left"
                 data-aos-duration="1000"
-                data-aos-delay="1000"
+                data-aos-delay="50"
               >
                 <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
                   <img
@@ -161,7 +161,7 @@ const ServiceSection: React.FC = () => {
                 className="w-full p-4 bg-gray-100 rounded-3xl shadow-md cursor-pointer hover:shadow-lg transition relative z-30"
                 data-aos="zoom-in-left"
                 data-aos-duration="1000"
-                data-aos-delay="1200"
+                data-aos-delay="50"
               >
                 <div className="h-[180px] w-full bg-gray-300 rounded-2xl mb-4 flex items-center justify-center">
                   <img
@@ -177,7 +177,7 @@ const ServiceSection: React.FC = () => {
                 className="bg-white p-4 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.2)]"
                 data-aos="zoom-in-left"
                 data-aos-duration="1000"
-                data-aos-delay="1200"
+                data-aos-delay="50"
               >
                 <span className="text-lg">Real-Time Dashboards</span>
                 <p className="text-gray-500">

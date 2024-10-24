@@ -81,6 +81,7 @@ const SkillsSection: React.FC = () => {
             <button className="px-4 py-2 border border-[#9C27B0] text-[#111827] rounded-lg font-semibold snap-start shrink-0 skills">
               Team Managements
             </button>
+            
           </div>
 
           {/* Right Arrow */}

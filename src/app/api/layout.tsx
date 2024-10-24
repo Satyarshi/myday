@@ -26,7 +26,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         </section>
       )}
 
-      <section className="flex justify-center items-center mt-[-200px] overflow-hidden">
+      <section className="flex justify-center items-center mt-[-350px] overflow-hidden">
         <UnlockPotentialSection />
       </section>
     </>

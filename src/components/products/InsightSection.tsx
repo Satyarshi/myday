@@ -9,7 +9,7 @@ const InsightSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-12 w-full bg-white">
+    <section className="relative py-12 w-full bg-white mt-10">
       <div className="container mx-auto text-center z-10 px-4 sm:px-6 lg:px-8">
         {/* Background overlay with large text */}
         <div className="mb-10 relative">
