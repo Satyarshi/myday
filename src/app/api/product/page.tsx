@@ -7,6 +7,7 @@ import ServicesSection from "@/components/products/ServicesSection";
 import SolutionSection from "@/components/products/SolutionSection";
 import ImageSection from "@/components/products/ImageSection";
 import InsightSection from "@/components/products/InsightSection";
+import { productData } from "@/components/Data";
 
 const Product1: React.FC = () => {
   return (
@@ -14,10 +15,10 @@ const Product1: React.FC = () => {
       {/* Hero Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
         <ImageSection
-          shinyText="What’s new? Instantly issue virtual card’s"
-          heading="The Future of Skills Development is Here"
-          subheading="SPARCLE is an AI-powered skills acceleration tool designed to simplify and automate your assessment, development, and talent mapping processes. Drive continuous learning, improve performance, and unlock growth across your organization with powerful, easy-to-use functionalities."
-          buttonText="Accelerate Skills Today"
+          shinyText={productData.heroSection.shinyText}
+          heading={productData.heroSection.heading}
+          subheading={productData.heroSection.subheading}
+          buttonText={productData.heroSection.buttonText}
         />
       </section>
 
@@ -33,27 +34,18 @@ const Product1: React.FC = () => {
       {/* Benefits Section */}
       <section className="overflow-hidden">
         <BenefitsSection
-          title="Empowering Learners, Enhancing Business Impact"
-          descriptionTitle="Key features that drive skill transformation"
-          descriptionText="Sparkle leverages data-driven insights and personalized learning
-                pathways to boost employee engagement, performance, and
-                retention. Unlock continuous growth and improvement with a focus
-                on real-world application."
-          listItems={[
-            "Customized Learning Paths: Tailored to individual needs for optimal skill development.",
-            "Real-Time Feedback: Helps learners immediately improve their performance.",
-            "Data-Driven Insights: Measure progress and skill gaps for better decision-making.",
-            "Enhanced Engagement: Keeps learners motivated with interactive and adaptive learning modules.",
-            "Seamless Integration: Works smoothly across multiple platforms and devices for convenient learning.",
-          ]}
+          title={productData.benefitsSection.title}
+          descriptionTitle={productData.benefitsSection.descriptionTitle}
+          descriptionText={productData.benefitsSection.descriptionText}
+          listItems={productData.benefitsSection.listItems}
         />
       </section>
 
       {/* Skills Section */}
       <section className="flex justify-center items-center p-10 overflow-hidden">
         <ProductSkills
-          title="Personalized Learning Powered by AI Insights"
-          description="Sparkle transforms the learning experience with AI-based content delivery and adaptive assessments. By continuously evaluating performance and engagement, Sparkle provides actionable insights to fine-tune the learning journey, ensuring that each individual reaches their full potential."
+          title={productData.skillsSection.title}
+          description={productData.skillsSection.description}
         />
       </section>
 

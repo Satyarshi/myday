@@ -1,8 +1,8 @@
 import React from "react";
 import HeroSection from "@/components/case-study/HeroSection";
 import ProblemSection from "@/components/case-study/ProblemSection";
-import SolutionSection from "@/components/case-study/SolutionSection";
-import ResultSection from "@/components/case-study/ResultSection";
+import TextSection from "@/components/case-study/SolutionSection";
+import { caseStudySolution,caseStudyResult } from "@/components/Data";
 
 const CaseStudy: React.FC = () => {
   return (
@@ -19,12 +19,22 @@ const CaseStudy: React.FC = () => {
 
       {/* Solution Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
-        <SolutionSection />
+        <TextSection
+          title={caseStudySolution.title}
+          description={caseStudySolution.description}
+          listItems={caseStudySolution.listItems}
+          additionalText={caseStudySolution.additionalText}
+        />
       </section>
 
       {/* Result Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
-        <ResultSection />
+      <TextSection
+          title={caseStudyResult.title}
+          description={caseStudyResult.description}
+          listItems={caseStudyResult.listItems}
+          additionalText={caseStudyResult.additionalText}
+        />
       </section>
     </>
   );

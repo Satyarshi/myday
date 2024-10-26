@@ -7,17 +7,17 @@ import ServicesSection from "@/components/products/ServicesSection";
 import SolutionSection from "@/components/products/SolutionSection";
 import ImageSection from "@/components/products/ImageSection";
 import InsightSection from "@/components/products/InsightSection";
-import { productData } from "@/components/products/productData";
+import { productsData } from "@/components/Data";
 const Product1: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
       <section className="flex justify-center items-center p-4 overflow-hidden">
         <ImageSection
-          shinyText={productData.heroSection.shinyText}
-          heading={productData.heroSection.heading}
-          subheading={productData.heroSection.subheading}
-          buttonText={productData.heroSection.buttonText}
+          shinyText={productsData.heroSection.shinyText}
+          heading={productsData.heroSection.heading}
+          subheading={productsData.heroSection.subheading}
+          buttonText={productsData.heroSection.buttonText}
         />
       </section>
 
@@ -33,18 +33,18 @@ const Product1: React.FC = () => {
       {/* Benefits Section */}
       <section className="overflow-hidden">
         <BenefitsSection
-          title={productData.benefitsSection.title}
-          descriptionTitle={productData.benefitsSection.descriptionTitle}
-          descriptionText={productData.benefitsSection.descriptionText}
-          listItems={productData.benefitsSection.listItems}
+          title={productsData.benefitsSection.title}
+          descriptionTitle={productsData.benefitsSection.descriptionTitle}
+          descriptionText={productsData.benefitsSection.descriptionText}
+          listItems={productsData.benefitsSection.listItems}
         />
       </section>
 
       {/* Skills Section */}
       <section className="flex justify-center items-center p-10 overflow-hidden">
         <ProductSkills
-          title={productData.skillsSection.title}
-          description={productData.skillsSection.description}
+          title={productsData.skillsSection.title}
+          description={productsData.skillsSection.description}
         />
       </section>
 
